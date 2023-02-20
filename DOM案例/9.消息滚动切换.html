@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .item {
+      background-color: purple;
+      width: 40px;
+      height: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="item">a</div>
+  <script>
+    let arr = ["a", "b", "c"]
+    var itemEl = document.querySelector(".item")
+    var i = 0
+    setInterval(function() {
+      itemEl.textContent = arr[i]
+      if(i === 2) {
+        i = 0
+      } else {
+        i++
+      }
+    }, 3000)
+
+    // 随机
+    Math.floor(Math.random() * arr.length)
+  </script>
+</body>
+</html>

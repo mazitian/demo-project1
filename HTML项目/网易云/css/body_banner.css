@@ -1,0 +1,131 @@
+.banner {
+  height: 285px;
+  border-color: orange;
+  background: url(../images/banner-01.jpg) center center / 6000px;
+}
+
+.banner .area {
+  position: relative;
+  height: 285px;
+  background-color: orange;
+}
+
+.banner .area-left {
+  position: relative;
+  width: 730px;
+}
+
+/* 图片列表 */
+/* 
+.banner .area-left .img-list {
+   display: flex; 
+   overflow: hidden; 
+} 
+*/
+
+/* .banner .area-left .img-list li {
+  flex-shrink: 0;
+  width: 100%;
+} */
+
+.banner .area-left .img-list .item {
+  display: block;
+}
+
+.banner .area-left .img-list .item img {
+  width: 100%;
+  height: 285px;
+}
+
+/* 点列表 */
+.banner .area-left .dots-list {
+  position: absolute;
+  bottom: 5px;
+/*       
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+   */
+  /* 这样设置居中不了 要求有明确固定宽  */
+  width: 730px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner .area-left .dots-list li {
+  margin: 0 2px;
+}
+
+.banner .area-left .dots-list .item {
+  display: block;
+  /* a元素不能设置宽高 所以要block */
+  width: 20px;
+  height: 20px;
+  background: url(../images/dots-list.png) 3px -343px;
+}
+
+.banner .area-left .dots-list .item.active {
+  background-position: -16px -343px;
+}
+
+.banner .area-left .dots-list .item:hover {
+  background-position: -16px -343px;
+}
+
+/* 右侧 */
+.banner .area .area-right {
+  position: absolute;
+  right: -1px;
+  top: 0;
+  bottom: 0;
+  width: 254px;
+  background: url(../images/banner-right.png);
+}
+
+.banner .area .area-right .download {
+  display: block;
+  width: 215px;
+  height: 55px;
+  margin: 186px 0 0 19px;
+  text-indent: -9999px;/* 不显示文本 */
+}
+
+.banner .area .area-right .download:hover {
+  background: url(../images/banner-right.png) 0 -290px;
+}
+
+.banner .area-right .desc {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+  color: #8d8d8d;
+}
+
+.banner .area .control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 37px;
+  height: 63px;
+  background-image: url(../images/dots-list.png);
+  text-indent: -9999px;
+}
+
+.banner .area .control-left {
+  left: -70px;
+  background-position: 0 -360px;
+}
+
+.banner .area .control-left:hover {
+  background-position: 0 -430px;
+}
+
+.banner .area .control-right {
+  right: -70px;
+  background-position: 0 -508px;
+}
+
+.banner .area .control-right:hover {
+  background-position: 0 -578px;
+}

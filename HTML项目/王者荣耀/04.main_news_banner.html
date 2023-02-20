@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main_news</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <style>
+    .main {
+      height: 100px;
+    }
+
+    .news-section {
+      display: flex;
+      height: 342px;
+    }
+
+    .news-section .banner {
+      width: 605px;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    .news-section .banner .image-list {
+      display: flex;
+      width: 604px;
+    }
+
+    .news-section .banner .image-list .item {
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    .news-section .banner .image-list .item a {
+      display: block;
+    }
+
+    .news-section .banner .image-list .item a img {
+      width: 100%;
+    }
+
+    .news-section .banner .title-list {
+      display: flex;
+      height: 44px;
+      line-height: 44px;
+    }
+
+    .news-section .banner .title-list .item {
+      flex: 1;
+      text-align: center;
+    }
+
+    .news-section .banner .title-list .item a {
+      display: block;
+      font-size: 14px;
+      color: #b1b2be
+    }
+
+    .news-section .banner .title-list .item.active a {
+    /* .news-section .banner .title-list .item a:hover { */
+      color: #f3c258;
+      background-color: rgba(255,255,255,.15);
+    }
+
+    .news-section .news {
+      flex: 1;
+      background-color: #00f;
+    }
+
+    .news-section .download {
+      width: 236px;
+      background-color: purple;
+    }
+
+    .news-section .download a {
+      display: block;
+      background: url(./img/main_sprite.png) no-repeat;
+    }
+
+    .news-section .download a.download-btn {
+      height: 128px;
+      background-position: 0 -219px;
+    }
+
+    .news-section .download a.guard-btn {
+      height: 106px;
+      background-position: 0 -350px;
+    }
+
+    .news-section .download a.experience-btn {
+      height: 108px;
+      background-position: 0 -461px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="main main_wrapper">
+    <div class="news-section">
+      <div class="banner">
+        <ul class="image-list">
+          <li class="item">
+            <a href="#">
+             <img src="./img/banner1.jpeg" alt="">
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+             <img src="./img/banner2.jpeg" alt="">
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+             <img src="./img/banner3.jpeg" alt="">
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+             <img src="./img/banner4.jpeg" alt="">
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+             <img src="./img/banner5.jpeg" alt="">
+            </a>
+          </li>
+        </ul>
+        <ul class="title-list">
+          <li class="item active">
+            <a href="#">头号选手</a>
+          </li>
+          <li class="item">
+            <a href="#">头号选手</a>
+          </li>
+          <li class="item">
+            <a href="#">头号选手</a>
+          </li>
+          <li class="item">
+            <a href="#">头号选手</a>
+          </li>
+          <li class="item">
+            <a href="#">头号选手</a>
+          </li>
+        </ul>
+      </div>
+      <div class="news"></div>
+      <div class="download">
+        <a class="download-btn" href="#"></a>
+        <a class="guard-btn" href="#"></a>
+        <a class="experience-btn" href="#"></a>
+      </div>
+    </div>
+    <div class="content-section"></div>
+    <div class="match-section"></div>
+  </div>
+  <script>
+    // var titleListEl = document.querySelector(".title-list")
+    // var activeItemEl = document.querySelector(".active")
+    // var imageListEl = document.querySelector(".image-list")
+    // titleListEl.onmouseover = function(event) {
+    //   var itemEl = event.target.parentElement
+    //   if (itemEl.classList.contains("item")) {
+    //     activeItemEl.classList.remove("active")
+    //     itemEl.classList.add("active")
+    //     activeItemEl = itemEl
+    //   }
+    //   for (var i = 0; i < titleListEl.children.length; i++) {
+    //     if (titleListEl.children[i] === itemEl) {
+    //       imageListEl.style.transform = `translateX(${-604 * i}px)`
+    //       imageListEl.style.transition = `all 300ms ease`
+    //     }
+    //   }
+    // }
+
+    // var titleListEl = document.querySelector(".title-list")
+    // var activeItemEl = document.querySelector(".active")
+    // var imageListEl = document.querySelector(".image-list")
+    // var currentIndex = 0
+    // titleListEl.onmouseover = function(event) {
+    //   var itemEl = event.target.parentElement
+    //   if (!itemEl.classList.contains("item")) return
+    //   activeItemEl.classList.remove("active")
+    //   itemEl.classList.add("active")
+    //   activeItemEl = itemEl
+    //   var index = Array.from(titleListEl.children).findIndex(function(item) {
+    //     return item ===itemEl
+    //   })
+    //   imageListEl.style.transform = `translateX(${-604 * index}px)`
+    //   imageListEl.style.transition = `all 300ms ease`
+    //   currentIndex = index
+    // }
+    // setInterval(function() {
+    //   currentIndex++
+    //   if (currentIndex === titleListEl.children.length) {
+    //     currentIndex = 0
+    //   }
+    //   imageListEl.style.transform = `translateX(${-604 * currentIndex}px)`
+    //   imageListEl.style.transition = `all 300ms ease`
+    //   activeItemEl.classList.remove("active")
+    //   var currentItemEl = titleListEl.children[currentIndex]
+    //   currentItemEl.classList.add("active")
+    //   activeItemEl = currentItemEl
+    // }, 3000)
+
+    // 重构
+    var titleListEl = document.querySelector(".title-list")
+    var imageListEl = document.querySelector(".image-list")
+    var bannerEl = document.querySelector(".banner")
+    var activeItemEl = document.querySelector(".active")
+    var currentIndex = 0
+    var timerID = null
+    titleListEl.onmouseover = function(event) {
+      var itemEl = event.target.parentElement
+      if (!itemEl.classList.contains("item")) return
+      var index = Array.from(titleListEl.children).findIndex(function(item) {
+        return item === itemEl
+      })
+      currentIndex = index
+      swichBanner()
+    }
+    startTimer()
+    bannerEl.onmouseenter = function() {
+      clearInterval(timerID)
+    }
+    bannerEl.onmouseleave = function() {
+      startTimer()
+    }
+    // 封装轮播函数
+    function swichBanner() {
+      imageListEl.style.transform = `translateX(${-604 * currentIndex}px)`
+      imageListEl.style.transition = `all 300ms ease`
+      activeItemEl.classList.remove("active")
+      var currentItemEl = titleListEl.children[currentIndex]
+      currentItemEl.classList.add("active")
+      activeItemEl = currentItemEl
+    }
+    // 封装添加定时器函数
+    function startTimer() {
+      timerID = setInterval(function() {
+        currentIndex++
+        if (currentIndex === titleListEl.children.length) {
+          currentIndex = 0
+        }
+        swichBanner()
+      }, 3000)
+    }
+  </script>
+</body>
+</html>

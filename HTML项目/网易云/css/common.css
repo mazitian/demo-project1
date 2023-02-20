@@ -1,0 +1,55 @@
+body {
+  font-size: 12px;
+}
+
+.wrapper_01 {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.wrapper_02 {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.wrapper_03 {
+  width: 982px;
+  margin: 0 auto;
+}
+
+.btn_sprite {
+  display: inline-block;
+  background: url(../images/button2.png) no-repeat;
+}
+
+.btn_type_01_sup {
+  background-position: right -100px;
+  padding-right: 5px;
+  height: 31px;
+  line-height: 31px;
+  text-align: center;
+}
+
+.btn_type_01_sub {
+  background-position:0 -59px;
+  padding-left: 2px;
+  height: 31px;
+}
+
+
+.icon_sprite {
+  display: inline-block;
+  background-image: url(../images/bottom-cover.png);
+}
+
+.icon_sprite_music {
+  background-position: 0px -24px;
+  width: 14px;
+  height: 11px;
+}
+
+.icon_sprite_play_01 {
+  background-position: 0 0;
+  width: 16px;
+  height: 17px;
+}

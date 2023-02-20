@@ -1,0 +1,220 @@
+.main .area {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #d3d3d3;
+}
+
+/* 左侧区域 */
+.main .area-left {
+  width: 729px;
+}
+
+.main .area-left {
+  width: 729px;
+  padding: 20px 20px 40px;
+
+}
+
+/* .main .area-left {
+  width: 729px;
+  padding: 20px 20px 40px;
+} */
+
+.recommend-section .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 20px 0;
+}
+
+/* 盒子样式 */
+.recommend-section .list .item {
+  width: 140px;
+  /* height: 140px; */
+  /* margin: 0 auto; */
+  /* background-color: #f00; */
+  margin-bottom: 30px;
+}
+
+.recommend-section .list .item .top {
+  position: relative;
+}
+
+.recommend-section .list .item .top img {
+  /* 将下面的多出来的区域去除 */
+  vertical-align: top;
+
+  /* display: block */
+}
+
+.recommend-section .list .item .top .cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: url(../images/cover-bottom.png) no-repeat 0 0;
+}
+
+.recommend-section .list .item .top .info {
+  position: absolute;
+  bottom: 46px;
+  left: 0;
+  right: 0;
+  height: 27px;
+  padding-left: 10px;
+  line-height: 27px;
+
+  font-size: 12px;
+  color: #ccc;
+
+  background-image: url(../images/cover-bottom.png);
+  background-position: 0 -537px;
+}
+
+.recommend-section .list .item .top .info .icon-music {
+  position: relative;
+  top: 1px;
+}
+
+.recommend-section .list .item .top .info .count {
+  margin-left: 4px;
+}
+
+.recommend-section .list .item .top .info .icon-play {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  right: 10px;
+  margin: auto 0;
+}
+
+/* 盒子底部样式 */
+
+.recommend-section .list .item .bottom {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.recommend-section .list .item .bottom:hover {
+  text-decoration: underline;
+}
+
+/* 新碟上架 */
+.disc-section .content {
+  height: 186px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+  border: 1px solid #d3d3d3;
+}
+
+.disc-section .content .inner {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 25px;
+  border: 1px solid #fff;
+  background-color: #f5f5f5;
+}
+
+.disc-section .content .inner .roller {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.disc-section .content .inner .roller .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+  flex-shrink: 0;
+}
+
+.disc-section .content .inner .roller .list .item {
+  width: 118px;
+  height: 150px;
+  background: url(../images/main-right.png) no-repeat -260px 100px;
+}
+
+/* 做遮盖层 */
+.disc-section .content .inner .roller .list .item .album {
+  position: relative;
+}
+
+.disc-section .content .inner .roller .list .item .cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../images/cover-bottom.png) no-repeat 0 -570px;
+}
+
+/* 做播放图标 */
+.disc-section .content .inner .roller .list .item .album .play {
+  position: absolute;
+  right: 15px;
+  bottom: 1px;
+  width: 22px;
+  height: 22px;
+  background: url(../images/bottom-cover.png) 0 -83px;
+  display: none;
+}
+
+.disc-section .content .inner .roller .list .item .album:hover .play {
+  display: block;
+}
+
+/* 新碟上架设置下面的文字 */
+.disc-section .content .inner .roller .list .item a {
+  display: block;
+  padding-top: 6px;
+  padding-right: 10px;
+  /* 超出部分设置... */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.disc-section .content .inner .roller .list .item .title {
+  color: #000;
+}
+
+.disc-section .content .inner .roller .list .item .ancher {
+  color: #666;
+}
+
+/* 做两边的小图标 */
+
+
+.disc-section .inner .control {
+  position: absolute;/* 设置宽度高度 */
+
+  /* 垂直居中 */
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+
+  /* 图标位移 */
+  top: -38px;
+
+  width: 17px;
+  height: 17px;
+  background-image: url(../images/main-right.png);
+}
+
+.disc-section .inner .control-left {
+  left: 5px;
+  background-position: -260px -75px;
+}
+
+.disc-section .inner .control-right {
+  right: 5px;
+  background-position: -320px -75px;
+}

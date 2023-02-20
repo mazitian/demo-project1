@@ -1,0 +1,24 @@
+.main {
+  background: url(../img/背景.jpg) no-repeat center top;
+}
+
+.main .link {
+  display: block;
+  width: 1200px;
+  margin: 8px auto 12px;
+  height: 440px;
+}
+
+.main .section-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.main .section-content .left-content {
+  width: 872px;
+}
+
+.main .section-content .right-content {
+  width: 295px;
+}

@@ -1,0 +1,160 @@
+.top {
+  height: 70px;
+  background-color: #242424;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  height: 69px;
+  line-height: 69px;/* 文本居中 高度和盒子一致 */
+}
+
+.topbar .bar-left {
+  display: flex;
+}
+
+.topbar .bar-left .logo {
+  background-image: url(../images/topbar.png);
+}
+
+.topbar .bar-left .logo a {
+  display: block;
+  width: 157px;
+  padding-right: 20px;
+  text-indent: -9999px;/* 这个属性对行内非替换元素不生效 所以要block 或者float */
+}
+
+.topbar .bar-left .list {
+  display: flex;
+}
+
+.topbar .bar-left .list .item {
+  position: relative;
+  display: block;/* 因为有flex 所以设置了不会独占一行 目的让a继承li的高度 (改变非替换行内元素为block) */
+  padding: 0 19px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.topbar .bar-left .list .item:hover,
+.topbar .bar-left .list .item.active {
+  color: #fff;
+  background-color: #000;
+}
+
+.topbar .bar-left .list .item.active::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 7px;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: url(../images/topbar.png) -226px 0;
+  /* background简写属性: background-images + background-position */
+}
+
+.topbar .bar-left .list .item .icon-hot {
+  position: absolute;
+  width: 28px;
+  height: 19px;
+  top: 20px;
+  right: -15px;
+  background: url(../images/topbar.png) -190px 0;
+}
+
+/* 布局右侧 */
+.topbar .bar-right {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.topbar .bar-right .login a {
+  color: #787878;
+}
+
+.topbar .bar-right .login:hover a {/* 这个不知道 重要 */
+  color: #ccc
+}
+
+.topbar .bar-right .login a:hover {
+  color: #787878;
+  text-decoration: underline;
+}
+
+.topbar .bar-right .antor a {
+  display: inline-block;
+  width: 90px;
+  height: 32px;
+  margin: 0 20px;
+  line-height: 32px;
+  color: #ccc;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #4f4f4f;
+  border-radius: 20px;
+}
+
+.topbar .bar-right .antor a:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.topbar .bar-right .search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 158px;
+  height: 32px;
+  box-sizing: border-box;
+  padding-right: 10px;
+  border-radius: 30px;
+  background: #fff url(../images/topbar.png) 0 -99px;/* 颜色 + 图片 + position */
+}
+
+.topbar .bar-right .search input {
+  font-size: 12px;
+  width: 118px;
+}
+
+/* 导航条 */
+.nav {
+  height: 35px;
+  line-height: 35px;
+  background-color: #c20c0c;
+  box-sizing: border-box;
+  border-bottom: 1px solid #a40011;
+}
+
+.navbar {
+  box-sizing: border-box;
+  padding-left: 180px;
+}
+
+.navbar .list {
+  display: flex;
+}
+
+.navbar .list .item {
+  display: inline-block;
+}
+
+.navbar .list .item span {
+  display: inline-block;
+  padding: 0 13px;
+  margin: 7px 17px;
+  height: 20px;
+  line-height: 20px;
+  color: #fff;
+  border-radius: 20px;
+}
+.navbar .list .item:hover span, 
+.navbar .list .item.active span {
+  /* 注意hover是: active是. */
+  background-color: #9B0909;
+}

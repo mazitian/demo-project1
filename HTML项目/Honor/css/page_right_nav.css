@@ -1,0 +1,39 @@
+.right-nav {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 254px;
+  height: 494px;
+  right: 0;
+  background: url(../img/right-nav.png) no-repeat;
+}
+
+/* .right-nav .right-dj {
+} */
+
+.right-nav .right-list {
+  position: relative;
+  left: 58px;
+} 
+
+.right-nav .right-list .item {
+  width: 117px;
+  height: 38px;
+  background: url(../img/r_all2022.png) no-repeat;
+}
+
+.right-nav .right-list .item.code {
+  height: 116px;
+  text-align: center;
+  background-position: 0 -3px;
+}
+
+.right-nav .right-list .item.code img {
+  width: 111px;
+  height: 110px;
+  margin-top: 2px;
+}
+
+.right-nav .right-list .item.weibo {
+  background-position: -122px -120px;
+}

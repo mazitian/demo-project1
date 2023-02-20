@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王者荣耀右侧导航</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    .right-nav {
+      position: fixed;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 254px;
+      height: 494px;
+      right: 0;
+      background: url(./img/right-nav.png) no-repeat;
+    }
+
+    /* .right-nav .right-dj {
+    } */
+
+    .right-nav .right-list {
+      position: relative;
+      left: 58px;
+    } 
+
+    .right-nav .right-list .item {
+      width: 117px;
+      height: 38px;
+      background: url(./img/r_all2022.png) no-repeat;
+    }
+
+    .right-nav .right-list .item.code {
+      height: 116px;
+      text-align: center;
+      background-position: 0 -3px;
+    }
+
+    .right-nav .right-list .item.code img {
+      width: 111px;
+      height: 110px;
+      margin-top: 2px;
+    }
+
+    .right-nav .right-list .item.weibo {
+      background-position: -122px -120px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="right-nav">
+    <div class="right-dj">
+      <img src="./img/妲己.png" alt="">
+    </div>
+    <ul class="right-list">
+      <li class="item code">
+        <img src="./img/二维码.webp" alt="">
+      </li>
+      <li class="item weibo"></li>
+      <li class="item weibo"></li>
+      <li class="item weibo"></li>
+    </ul>
+  </div>
+
+</body>
+</html>
